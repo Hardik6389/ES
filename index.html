@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employability Skills Mock Exam</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Employability Skills Mock Exam</h1>
+            <div class="nav-buttons">
+                <button id="homeBtn" class="active">Exam</button>
+                <button id="historyBtn">History</button>
+            </div>
+        </header>
+
+        <main>
+            <!-- Exam View -->
+            <div id="examView" class="view">
+                <div class="year-selector">
+                    <label for="yearSelect">Select Year:</label>
+                    <select id="yearSelect">
+                        <option value="both">Both Years</option>
+                        <option value="first">First Year</option>
+                        <option value="second">Second Year</option>
+                    </select>
+                </div>
+                
+                <div id="instructions">
+                    <h2>Exam Instructions</h2>
+                    <ul>
+                        <li>Total questions: 25</li>
+                        <li>Each question carries 2 marks</li>
+                        <li>Total marks: 50</li>
+                        <li>Select the correct answer for each question</li>
+                        <li>Click "Submit Exam" when finished</li>
+                    </ul>
+                    <button id="startExamBtn">Start Exam</button>
+                </div>
+
+                <div id="examContainer" style="display: none;">
+                    <div id="questionCounter">Question 1 of 25</div>
+                    <div id="questionContainer"></div>
+                    <div id="optionsContainer"></div>
+                    <div id="navigationButtons">
+                        <button id="prevBtn" disabled>Previous</button>
+                        <button id="nextBtn">Next</button>
+                    </div>
+                    <button id="submitExamBtn">Submit Exam</button>
+                </div>
+            </div>
+
+            <!-- Results View -->
+            <div id="resultsView" class="view" style="display: none;">
+                <h2>Exam Results</h2>
+                <div id="resultsDetails"></div>
+                <button id="newExamBtn">Take New Exam</button>
+                <button id="viewAnswersBtn">View Answers</button>
+            </div>
+
+            <!-- Answers View -->
+            <div id="answersView" class="view" style="display: none;">
+                <h2>Exam Answers</h2>
+                <div id="answersContainer"></div>
+                <button id="backToResultsBtn">Back to Results</button>
+            </div>
+
+            <!-- History View -->
+            <div id="historyView" class="view" style="display: none;">
+                <h2>Exam History</h2>
+                <div id="historyContainer"></div>
+                <button id="backToExamBtn">Back to Exam</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2023 Employability Skills Mock Exam for ITI Students</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
